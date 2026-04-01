@@ -1,0 +1,77 @@
+/* src/pages/PosterGenerator.css */
+.poster-page {
+  min-height: 100vh; background: var(--bg);
+  padding: 0 0 4rem; overflow-x: hidden;
+}
+.poster-layout {
+  display: grid; grid-template-columns: 380px 1fr; gap: 2.5rem;
+  max-width: 1300px; margin: 2rem auto 0; padding: 0 5%;
+  align-items: start;
+}
+
+/* Controls panel */
+.poster-controls { display: flex; flex-direction: column; gap: 1.25rem; }
+.control-section { padding: 1.5rem; }
+.control-title {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem;
+}
+
+/* Template buttons */
+.template-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
+.template-btn {
+  padding: 1.1rem 0.75rem; border-radius: 10px; border: 2px solid transparent;
+  cursor: pointer; transition: all 0.25s; text-align: center;
+  min-height: 70px; display: flex; align-items: center; justify-content: center;
+}
+.template-btn.active { transform: scale(0.97); box-shadow: 0 0 0 2px var(--gold), 0 0 20px rgba(201,168,76,0.25); }
+.template-btn:hover { transform: scale(0.98); }
+
+/* Size buttons */
+.size-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
+.size-btn {
+  padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03); cursor: pointer; transition: all 0.2s; text-align: left;
+  font-family: var(--font-body);
+}
+.size-btn.active { border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.07); }
+.size-btn:hover { border-color: rgba(201,168,76,0.25); }
+.size-label { font-size: 0.8rem; font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
+.size-ratio { font-size: 0.7rem; color: var(--text-muted); }
+
+.poster-form { display: flex; flex-direction: column; gap: 0.9rem; }
+.toggle-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem; }
+.toggle-label {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.8rem; color: var(--text-muted); cursor: pointer;
+}
+.toggle-label input[type="checkbox"] { accent-color: var(--gold); width: 16px; height: 16px; cursor: pointer; }
+
+/* Canvas area */
+.poster-canvas-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  position: sticky; top: 100px;
+}
+.poster-preview-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.poster-canvas-container {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 16px; padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(201,168,76,0.06);
+  max-width: 100%; overflow: hidden;
+}
+.poster-canvas {
+  display: block; max-width: 100%; height: auto; border-radius: 8px;
+  max-height: 65vh; width: auto;
+}
+.poster-size-note { font-size: 0.75rem; color: var(--text-dim); }
+
+@media (max-width: 1000px) {
+  .poster-layout { grid-template-columns: 1fr; }
+  .poster-canvas-wrap { position: relative; top: auto; }
+}
+@media (max-width: 640px) {
+  .template-grid { grid-template-columns: 1fr 1fr; }
+}

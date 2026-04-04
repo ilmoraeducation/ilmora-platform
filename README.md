@@ -276,7 +276,7 @@ emailjs.send('SERVICE_ID', 'TEMPLATE_ID', formData, 'PUBLIC_KEY');
 ## 📞 Contact Details (pre-configured)
 
 - **UAE:** +971 52 968 2123
-- **India:** +91 74830 08412
+- **India:** +91 77363 85780
 - **Email:** Ilmoraeducationgroup@gmail.com
 - **Instagram:** @ilmora_education
 
